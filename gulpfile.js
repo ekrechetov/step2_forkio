@@ -19,7 +19,7 @@ const config = {
     server: {
         baseDir: "./dist"
     },
-    tunnel: false,
+    tunnel: true,
     host: 'localhost',
     port: 3000,
     logPrefix: ""
@@ -91,9 +91,9 @@ gulp.task('copy-js', ['compress'], function () {
 });
 
 gulp.task('img-minify', () =>
-    gulp.src('src/image/*')
+    gulp.src('src/images/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('./dist/images'))
 );
 
 gulp.task('serve', function () {
@@ -101,6 +101,7 @@ gulp.task('serve', function () {
     gulp.watch('./src/**/*.html', ['html']).on('change', reload);
     gulp.watch('./src/scss/**/*.scss', ['mini-css']).on('change', reload);
     gulp.watch('./src/js/**/*.js', ['copy-js']).on('change', reload);
+    gulp.watch('./src/images/*', ['img-minify']).on('change', reload);
 });
 
 gulp.task('dev', gulpSequence('clean', ['html', 'copy-fonts', 'copy-js', 'mini-css', 'img-minify'], 'serve'));
