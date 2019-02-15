@@ -1,0 +1,136 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 40px 15px 50px 15px;
+
+  &__container {
+    width: 1200px;
+
+    &_logo {
+      &-block {
+        &-img {
+          display: none;
+          background: url("../images/css_sprites.png") -10px -10px;
+          left: 0;
+          width: 43px;
+          height: 41px;
+
+          &:hover {
+            background: url("../images/css_sprites.png") -73px -10px;
+          }
+        }
+
+        &-title {
+          @include font('Montserrat', 400, 24px);
+          color: #333;
+          text-transform: uppercase;
+
+          &:hover {
+            color: #8d81ac;
+
+            span {
+              color: #333;
+            }
+          }
+
+          span {
+            color: #8d81ac;
+          }
+        }
+      }
+
+      &-info {
+        @include font('Montserrat', 400, 14px);
+        color: #848e97;
+        line-height: 21px;
+        margin-top: 36px;
+      }
+    }
+
+    &_menu-nav {
+      &__title {
+        @include font('Montserrat', 400, 16px);
+        color: #323232;
+        margin-top: 36px;
+      }
+
+      &_bar {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+
+        &-link {
+          @include font('Montserrat', 400, 15px);
+          color: #8d81ac;
+          line-height: 20px;
+
+          &-item {
+            position: relative;
+
+            &:hover::after {
+              content: '';
+              display: block;
+              height: 1px;
+              width: 100%;
+              background-color: #8d81ac;
+              position: absolute;
+              top: 18px;
+            }
+          }
+
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &__requisites {
+      &-phone {
+        &-link {
+          @include font('Montserrat', 700, 30px);
+          color: #31384d;
+          margin-top: 35px;
+          display: inline-block;
+          text-decoration: none;
+        }
+
+        &-info {
+          @include font('Montserrat', 400, 12px);
+          color: #848e97;
+          margin-top: 15px;
+        }
+      }
+
+      &-location {
+        &-city {
+          @include font('Montserrat', 400, 16px);
+          color: #323232;
+          margin-top: 40px;
+        }
+
+        &-address {
+          @include font('Montserrat', 400, 14px);
+          color: #848e97;
+          display: inline-block;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &__info {
+      &-title {
+        @include font('Montserrat', 400, 16px);
+        color: #323232;
+        margin-top: 40px;
+      }
+
+      &-text {
+        @include font('Montserrat', 400, 14px);
+        color: #848e97;
+        line-height: 23px;
+        margin-top: 25px;
+      }
+    }
+  }
+}

@@ -54,38 +54,25 @@
   .solution {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    //flex-direction: row;
-    //flex-wrap: wrap;
+    grid-template-areas: 'description title' 'description editor';
     &__title {
       @include font('Montserrat', 700, 48px);
-      grid-column: 2;
-      grid-row: 1/1;
-      //align-self: flex-start;
-      //width: 25%;
+      grid-area: title;
     }
 
     &__description {
-      grid-column: 1;
-      grid-row: 2/2;
+      grid-area: description;
       padding: 0;
 
       &-block {
         padding: 0 90px 55px 90px;
       }
 
-      //order: -1;
-      //width: 50%;
-      //flex-grow: 2;
-      //align-self: stretch;
     }
 
     &__editor {
-      grid-column: 2;
-      grid-row: 2/3;
+      grid-area: editor;
       margin-top: 30px;
-      //width: 25%;
-      //align-self: flex-end;
-      //height: 500px;
     }
   }
 }
