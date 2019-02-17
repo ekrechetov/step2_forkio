@@ -52,12 +52,12 @@
 
 @media (min-width: 1200px) {
   .solution {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'description title' 'description editor';
+    justify-content: center;
+
     &__title {
       @include font('Montserrat', 700, 48px);
       grid-area: title;
+      margin: 0;
     }
 
     &__description {
@@ -65,14 +65,19 @@
       padding: 0;
 
       &-block {
-        padding: 0 90px 55px 90px;
+        padding: 0 90px 55px 0;
       }
-
     }
 
     &__editor {
       grid-area: editor;
       margin-top: 30px;
     }
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'description title' 'description editor';
+    width: 1200px;
   }
 }

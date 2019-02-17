@@ -1,0 +1,228 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  &__slick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+
+    &-left {
+      color: rgb(161, 161, 161);
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      border: none;
+    }
+
+    &-right {
+      color: rgb(161, 161, 161);
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      border: none;
+    }
+
+    &-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 30px;
+    }
+
+    &-person {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__block {
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        width: 85px;
+        height: 85px;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        &-img {
+          height: 100%;
+        }
+      }
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 25px;
+      }
+
+      &__name {
+        @include font('Montserrat', 700, 24px);
+        color: #474747;
+      }
+
+      &__nick {
+        @include font('Montserrat', 400, 16px);
+        color: #8d81ac;
+        margin-top: 10px;
+      }
+    }
+
+    &__info {
+      padding-top: 25px;
+      text-align: center;
+
+      &-feedback {
+        @include font('Lato', 400, 17px);
+        color: #333;
+        text-align: center;
+        margin-bottom: 15px;
+        line-height: 24px;
+      }
+
+      &-name {
+        @include font('Lato', 400, 17px);
+        color: #8d81ac;
+      }
+
+      &-last-feedback {
+        @include font('Montserrat', 400, 16px);
+      }
+    }
+  }
+
+  &__info {
+    padding: 35px 0 70px 0;
+    text-align: center;
+
+    &-git {
+      display: flex;
+      flex-direction: column;
+
+      &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include font('Montserrat', 400, 21px);
+        border-radius: 4px;
+        width: 280px;
+        height: 50px;
+        background: #f3f3f3;
+        color: #000;
+        text-decoration: none;
+        position: relative;
+        box-sizing: border-box;
+
+        &:hover {
+          background: #2b414d;
+          color: #f3f3f3;
+        }
+
+        &:hover .social__info-git-logo {
+          color: #f3f3f3;
+        }
+      }
+
+      &-logo {
+        position: absolute;
+        left: 25px;
+        color: #2b414d;
+      }
+
+      &__foll {
+        @include font('Montserrat', 400, 14px);
+        color: #848e97;
+        margin-top: 18px;
+      }
+    }
+
+    &-twitter {
+      display: flex;
+      flex-direction: column;
+
+      &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include font('Montserrat', 400, 21px);
+        border-radius: 4px;
+        width: 280px;
+        height: 50px;
+        background: #26a6d1;
+        color: #fff;
+        text-decoration: none;
+        margin-top: 30px;
+        position: relative;
+        box-sizing: border-box;
+
+        &:hover {
+          background: #fff;
+          color: #26a6d1;
+          border: 1px solid #26a6d1;
+        }
+      }
+
+      &-logo {
+        position: absolute;
+        left: 25px;
+      }
+
+      &__foll {
+        @include font('Montserrat', 400, 14px);
+        color: #848e97;
+        margin-top: 18px;
+      }
+    }
+
+    &-facebook {
+      display: flex;
+      flex-direction: column;
+
+      &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include font('Montserrat', 400, 21px);
+        border-radius: 4px;
+        width: 280px;
+        height: 50px;
+        background: #3b5998;
+        color: #fff;
+        text-decoration: none;
+        margin-top: 30px;
+        position: relative;
+        box-sizing: border-box;
+
+        &:hover {
+          color: #3b5998;
+          background: #fff;
+          border: 1px solid #3b5998;
+        }
+      }
+
+      &-logo {
+        position: absolute;
+        left: 25px;
+      }
+
+      &__foll {
+        @include font('Montserrat', 400, 14px);
+        color: #848e97;
+        margin-top: 18px;
+      }
+    }
+  }
+}
