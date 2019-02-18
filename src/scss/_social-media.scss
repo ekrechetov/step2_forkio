@@ -27,6 +27,7 @@
 
       &-block {
         padding: 0 40px;
+        width: 320px;
       }
     }
 
@@ -46,6 +47,10 @@
     &__slick {
       margin-top: 50px;
 
+      &-block {
+        width: 600px;
+      }
+
       &__info {
         padding-top: 50px;
 
@@ -57,7 +62,7 @@
             content: '';
             width: 768px;
             height: 1px;
-            background: rgba(199, 199, 199, 0.2);;
+            background: rgb(199, 199, 199);;
             top: 40px;
             left: -313px;
           }
@@ -131,12 +136,19 @@
 
 @media (min-width: 1200px) {
   .social {
-    &__info {
-      padding-top: 120px;
-      padding-bottom: 80px;
+    &__slick {
 
-      &-twitter {
-        margin-bottom: 0;
+      &-block {
+        width: 880px;
+      }
+
+      &__info {
+        padding-top: 50px;
+        padding-bottom: 80px;
+
+        &-twitter {
+          margin-bottom: 0;
+        }
       }
     }
   }
