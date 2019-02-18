@@ -71,13 +71,13 @@
 
     &__editor {
       grid-area: editor;
-      margin-top: 30px;
+      margin: 0;
     }
-  }
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'description title' 'description editor';
-    width: 1200px;
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 'description title' 'description editor';
+      width: 1200px;
+    }
   }
 }

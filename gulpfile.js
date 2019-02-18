@@ -30,7 +30,7 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
-gulp.task('html', function () {
+gulp.task('copy-html', function () {
     return gulp.src('src/*.html')
         .pipe(gulp.dest('dist/'));
 });
@@ -41,13 +41,13 @@ gulp.task('copy-fonts', function () {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('./src/scss/**/*.scss')
+    return gulp.src('./src/scss/style.scss')
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(gulp.dest('./src/css'));
 });
 
 gulp.task('prefixer', ['sass'], () =>
-    gulp.src('src/css/*.css')
+    gulp.src('src/css/style.css')
         .pipe(autoprefixer({
             browsers: ['last 15 versions'],
             cascade: false
@@ -56,38 +56,33 @@ gulp.task('prefixer', ['sass'], () =>
 );
 
 gulp.task('mini-css', ['prefixer'], () => {
-    return gulp.src('./src/css/*.css')
+    return gulp.src('./src/css/style.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename("/style.min.css"))
         .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('concat-js', function () {
-    return gulp.src(['./src/js/**/*.js', '!./src/js/main.js'])
+    return gulp.src(['./src/js/*.js', '!./src/js/main.js'])
         .pipe(concat('main.js'))
-        .pipe(gulp.dest('./src/js'));
+        .pipe(gulp.dest('./src/jsMain'));
 });
 
 gulp.task('transpile', ['concat-js'], function () {
-    return gulp.src('./src/js/main.js')
+    return gulp.src('./src/jsMain/main.js')
         .pipe(babel({presets: ["@babel/env"]}))
-        .pipe(gulp.dest('./src/js'));
+        .pipe(gulp.dest('./src/jsMain'));
 });
 
-gulp.task('compress', ['transpile'], function (cb) {
+gulp.task('compress-js', ['transpile'], function (cb) {
     pump([
-            gulp.src('./src/js/main.js'),
+            gulp.src('./src/jsMain/main.js'),
             uglify(),
             rename("/main.min.js"),
             gulp.dest('dist/js')
         ],
         cb
     );
-});
-
-gulp.task('copy-js', ['compress'], function () {
-    return gulp.src('./src/main.min.js')
-        .pipe(gulp.dest('./dist/js'))
 });
 
 gulp.task('img-minify', () =>
@@ -98,10 +93,12 @@ gulp.task('img-minify', () =>
 
 gulp.task('serve', function () {
     browserSync.init(config);
-    gulp.watch('./src/**/*.html', ['html']).on('change', reload);
-    gulp.watch('./src/scss/**/*.scss', ['mini-css']).on('change', reload);
-    gulp.watch('./src/js/**/*.js', ['copy-js']).on('change', reload);
-    gulp.watch('./src/images/*', ['img-minify']).on('change', reload);
+    gulp.watch('./src/**/*.html', ['copy-html']).on('change', reload);
+    gulp.watch('./src/scss/*.scss', ['mini-css']).on('change', reload);
+    gulp.watch('./src/js/*.js', ['compress-js']).on('change', reload);
+    gulp.watch('./src/images/*.*', ['img-minify']).on('change', reload);
 });
 
-gulp.task('dev', gulpSequence('clean', ['html', 'copy-fonts', 'copy-js', 'mini-css', 'img-minify'], 'serve'));
+gulp.task('dev', gulpSequence(['copy-html', 'copy-fonts', 'compress-js', 'mini-css', 'img-minify'], 'serve'));
+
+gulp.task('build', gulpSequence('clean', ['copy-html', 'mini-css', 'copy-fonts', 'compress-js', 'img-minify']));
