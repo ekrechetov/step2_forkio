@@ -1,0 +1,47 @@
+.company {
+  background-image: url(../images/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+    .container {
+    width: 1200px;
+    margin: 0 auto;
+  } 
+  .container--company {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 487px;
+    position: relative;
+    .company__title {
+      @include font('Montserrat', 700, 82px);
+      color:  #ffffff;
+    }
+    .company__slogan {
+      @include font('Lato', 400, 30px);
+      color: #8d81ac;
+      margin-top: 18px;
+    }
+    .company__description {
+      @include font('Montserrat', 400, 16px);
+      color:  #848e97;
+      margin-top: 18px;
+      text-transform: uppercase;
+    }
+    .btn {        
+      text-decoration: none;       
+      text-align: center;        
+      background-color: rgb(142, 130, 173);
+      color: #ffffff;        
+    }
+    .btn--large {
+      @include font('Montserrat', 700, 21px);
+      display: inline-block;
+      width: 390px;
+      height: 62px;
+      border-radius: 31px;
+      line-height: 62px;
+      position: absolute;
+      transform: translateX(-50%);
+      bottom: -31px;
+    }
+  }  
+}
