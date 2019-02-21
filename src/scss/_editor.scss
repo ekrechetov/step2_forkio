@@ -1,0 +1,23 @@
+.editor {
+  padding-left: 25px;
+  padding-right: 25px;
+
+  .container--editor {
+    text-align: center;
+    padding-top: 121px;
+    padding-bottom: 88px;
+
+    .editor__title {
+      color: #635c73;
+      @include font('Montserrat', 700, 26px);
+      line-height: 31px;
+    }
+    .editor__descrition {
+      @include font('Lato', 400, 14px);
+      color: #323232;
+      line-height: 15px;
+      text-align: center;
+      margin-top: 24px; 
+    }
+  }
+}
