@@ -14,9 +14,11 @@
           left: 0;
           width: 43px;
           height: 41px;
+          transition: all 0.2s;
 
           &:hover {
             background: url("../images/css_sprites.png") -73px -10px;
+            transition: all 0.2s;
           }
         }
 
@@ -24,12 +26,15 @@
           @include font('Montserrat', 400, 24px);
           color: #333;
           text-transform: uppercase;
+          transition: all 0.5s;
 
           &:hover {
             color: #8d81ac;
+            transition: all 0.5s;
 
             span {
               color: #333;
+              transition: all 0.5s;
             }
           }
 

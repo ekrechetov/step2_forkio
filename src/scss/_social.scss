@@ -125,14 +125,17 @@
         text-decoration: none;
         position: relative;
         box-sizing: border-box;
+        transition: all 0.3s;
 
         &:hover {
           background: #2b414d;
           color: #f3f3f3;
+          transition: all 0.3s;
         }
 
         &:hover .social__info-git-logo {
           color: #f3f3f3;
+          transition: all 0.3s;
         }
       }
 
@@ -167,11 +170,13 @@
         margin-top: 30px;
         position: relative;
         box-sizing: border-box;
+        transition: all 0.3s;
 
         &:hover {
           background: #fff;
           color: #26a6d1;
           border: 1px solid #26a6d1;
+          transition: all 0.3s;
         }
       }
 
@@ -205,11 +210,13 @@
         margin-top: 30px;
         position: relative;
         box-sizing: border-box;
+        transition: all 0.3s;
 
         &:hover {
           color: #3b5998;
           background: #fff;
           border: 1px solid #3b5998;
+          transition: all 0.3s;
         }
       }
 
