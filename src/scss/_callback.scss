@@ -56,10 +56,12 @@
       border: none;
       padding: 0;
       box-sizing: border-box;
+      transition: all 0.3s;
       &:hover {
         color: #8d81ac;
         border: 1px solid #8d81ac;
         background: #fff;
+        transition: all 0.3s;
       }
     }
   }
