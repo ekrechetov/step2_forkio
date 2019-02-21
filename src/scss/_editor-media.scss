@@ -1,0 +1,65 @@
+@media screen and (min-width: 480px) {
+  .editor {
+    padding-left: 14px;
+    padding-right: 14px;
+  
+    .container--editor {
+      padding-top: 135px;
+      padding-bottom: 78px;
+  
+      .editor__title {
+        @include font('Montserrat', 700, 42px);
+        line-height: 35px;
+      }
+      .editor__descrition {
+        @include font('Lato', 400, 16px);
+        line-height: 19px;
+        margin-top: 54px; 
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .editor {
+    padding-left: 50px;
+    padding-right: 50px;
+  
+    .container--editor {
+      padding-top: 156px;
+      padding-bottom: 98px;
+  
+      .editor__title {
+        line-height: 15px;
+      }      
+      .editor__descrition {
+        @include font('Lato', 400, 21px);
+        line-height: 23px;
+        margin-top: 38px; 
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .editor {
+    padding-left: 0;
+    padding-right: 0;
+  
+    .container--editor {
+      width: 1200px;
+      padding-top: 129px;
+      padding-bottom: 70px;
+  
+      .editor__title {
+        @include font('Montserrat', 700, 54px);
+      }
+
+      // .editor__descrition {
+      //   max-width: 900px;
+      //   margin-left: 50%;
+      //   transform: translateX(-50%);
+      // }
+    }
+  }
+}
