@@ -1,0 +1,124 @@
+@media screen and (min-width: 480px) {
+  .header {
+    padding-left: 25px;
+    padding-right: 25px;
+  
+    .container--header {
+      // min-width: 480px;
+      
+      .header__logo {
+  
+        .header__logo-img {
+          // &:hover{
+  
+          // }
+        }
+        .header__logo-text {
+          display: block;
+          @include font('Lato', 700, 24px);
+          text-transform: uppercase;
+          color:  #8d81ac;
+          margin-left: 13px;        
+        } 
+      }    
+        
+      .btn--medium {
+        @include font('Montserrat', 700, 17px);
+        width: 130px;
+        height: 44px;
+        border-radius: 22px;
+        line-height: 44px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding-left: 20px;
+    padding-right: 20px;    
+    .container--header {
+      display: flex;      
+      justify-content: space-between;
+      flex-wrap: wrap;
+      height: 118px;
+      // min-width: 768px;
+      
+      .header__logo {
+        display: flex;
+        align-items: center;
+        .header__logo-img {
+        width: 43px;
+        height: 42px;
+
+        // &:hover{
+  
+        // }
+        }
+        .header__logo-text {
+          margin-left: 17px;       
+        } 
+      }    
+      
+      .header__menu-icon {
+        display: none;
+      }
+
+      .header-menu {
+        display: block;
+        position: initial;
+        flex-basis: 100%;
+        text-align: center;
+        background-color: transparent;
+        
+        &__item {          
+          display: inline-block;
+          margin-right: 24px;  
+          margin-left: 24px;
+          border-bottom: none;
+          padding: 0;
+
+          .header-menu__link {
+            @include font('Montserrat', 700, 16px);
+            color:  #8d81ac;
+            line-height: 15px;
+          }
+        }
+      }
+      .btn--medium {
+        @include font('Montserrat', 700, 16px);
+        width: 145px;
+        height: 38px;
+        border-radius: 19px;
+        line-height: 38px;          
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-left: 0;
+    padding-right: 0;
+    .container--header {
+      width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      height: 100px;      
+        
+      .header-menu {
+        // display: block;
+        flex-basis: initial;          
+
+        &__item {          
+          // display: inline-block;
+          margin-right: 48px;  
+          margin-left: 0;  
+        }
+      }
+      .btn--medium {
+        order: 3;
+      }            
+    }
+  }
+}
