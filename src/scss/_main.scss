@@ -3,6 +3,10 @@ a {
 }
 .container {
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 320px;
+  max-width: 1200px;
 }
 .btn {        
   text-align: center;        

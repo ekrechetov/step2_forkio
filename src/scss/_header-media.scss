@@ -42,7 +42,6 @@
       justify-content: space-between;
       flex-wrap: wrap;
       height: 118px;
-      // min-width: 768px;
       
       .header__logo {
         display: flex;
@@ -101,17 +100,15 @@
     padding-left: 0;
     padding-right: 0;
     .container--header {
-      width: 1200px;
       display: flex;
       justify-content: space-between;
       height: 100px;      
         
       .header-menu {
-        // display: block;
-        flex-basis: initial;          
+        flex-basis: initial;
+        margin-left: auto;
 
         &__item {          
-          // display: inline-block;
           margin-right: 48px;  
           margin-left: 0;  
         }

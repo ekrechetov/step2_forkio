@@ -9,7 +9,6 @@
   
       .editor__title {
         @include font('Montserrat', 700, 42px);
-        line-height: 35px;
       }
       .editor__descrition {
         @include font('Lato', 400, 16px);
@@ -29,11 +28,10 @@
       padding-top: 156px;
       padding-bottom: 98px;
   
-      .editor__title {
-        line-height: 15px;
-      }      
       .editor__descrition {
         @include font('Lato', 400, 21px);
+        width: 90%;
+        display: inline-block;
         line-height: 23px;
         margin-top: 38px; 
       }
@@ -47,7 +45,7 @@
     padding-right: 0;
   
     .container--editor {
-      width: 1200px;
+      // width: 1200px;
       padding-top: 129px;
       padding-bottom: 70px;
   
@@ -55,11 +53,9 @@
         @include font('Montserrat', 700, 54px);
       }
 
-      // .editor__descrition {
-      //   max-width: 900px;
-      //   margin-left: 50%;
-      //   transform: translateX(-50%);
-      // }
+      .editor__descrition {
+        width: 70%;
+      }
     }
   }
 }
