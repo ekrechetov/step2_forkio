@@ -102,3 +102,5 @@ gulp.task('serve', function () {
 gulp.task('dev', gulpSequence(['copy-html', 'copy-fonts', 'compress-js', 'mini-css', 'img-minify'], 'serve'));
 
 gulp.task('build', gulpSequence('clean', ['copy-html', 'mini-css', 'copy-fonts', 'compress-js', 'img-minify']));
+
+gulp.task('default', gulpSequence(['copy-html', 'mini-css'], 'serve'));

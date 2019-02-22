@@ -72,7 +72,7 @@
 @media screen and (min-width: 1200px) {
   .company {
     .container--company {
-      width: 1200px;
+      // width: 1200px;
       padding-top: 60px;
       .company__title {
         @include font('Montserrat', 700, 82px);
