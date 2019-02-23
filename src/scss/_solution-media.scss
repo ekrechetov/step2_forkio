@@ -53,6 +53,7 @@
 @media (min-width: 1200px) {
   .solution {
     justify-content: center;
+    position: relative;
 
     &__title {
       @include font('Montserrat', 700, 48px);
@@ -70,6 +71,11 @@
     }
 
     &__editor {
+      position: absolute;
+      right: 0;
+      width: 50%;
+      top: 12%;
+      height: 85%;
       grid-area: editor;
       margin: 0;
     }
