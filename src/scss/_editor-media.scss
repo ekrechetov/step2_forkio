@@ -1,61 +1,48 @@
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) {  
   .editor {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-top: 135px;
+    padding-bottom: 78px;
+    // padding-left: 14px;
+    // padding-right: 14px;
   
-    .container--editor {
-      padding-top: 135px;
-      padding-bottom: 78px;
-  
-      .editor__title {
-        @include font('Montserrat', 700, 42px);
-      }
-      .editor__descrition {
-        @include font('Lato', 400, 16px);
-        line-height: 19px;
-        margin-top: 54px; 
-      }
+    &__title {
+      @include font('Montserrat', 700, 42px);
     }
-  }
+    &__descrition {
+      @include font('Lato', 400, 16px);
+      line-height: 19px;
+      margin-top: 54px; 
+    }
+  }  
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {  
   .editor {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-top: 156px;
+    padding-bottom: 98px; 
+    // padding-left: 50px;
+    // padding-right: 50px;
   
-    .container--editor {
-      padding-top: 156px;
-      padding-bottom: 98px;
-  
-      .editor__descrition {
-        @include font('Lato', 400, 21px);
-        width: 90%;
-        display: inline-block;
-        line-height: 23px;
-        margin-top: 38px; 
-      }
+    &__descrition {
+      @include font('Lato', 400, 21px);
+      width: 90%;
+      display: inline-block;
+      line-height: 23px;
+      margin-top: 38px; 
     }
-  }
+  }  
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) { 
   .editor {
-    padding-left: 0;
-    padding-right: 0;
+    padding-top: 129px 0 70px 0;   
   
-    .container--editor {
-      // width: 1200px;
-      padding-top: 129px;
-      padding-bottom: 70px;
-  
-      .editor__title {
-        @include font('Montserrat', 700, 54px);
-      }
-
-      .editor__descrition {
-        width: 70%;
-      }
+    &__title {
+      @include font('Montserrat', 700, 54px);
     }
-  }
+
+    &__descrition {
+      width: 70%;
+    }
+  }  
 }
