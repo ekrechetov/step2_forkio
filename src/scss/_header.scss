@@ -1,84 +1,80 @@
+.container_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .header {
   background-color: rgb(34, 33, 37);
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-top: 30px; 
+  padding-bottom:30px;  
 
-  .container--header {
+  &__logo {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 103px;
-    min-width: 320px;
-    
-    .header__logo {
-      display: flex;
-      align-items: center;
 
-      .header__logo-img {
-        background-image: url(../images/css_sprites.png);
-        background-position: -10px -10px;
-        background-repeat: no-repeat;
-        width: 43px;
-        height: 42px;
-        // &:hover{
-
-        // }
-      }
-      .header__logo-text {
-        display: none;        
-      } 
-    }    
-      
-    .btn--medium {
-      @include font('Montserrat', 700, 15px);
-      width: 119px;
-      height: 38px;
-      border-radius: 19px;
-      line-height: 38px;
-    }
-    
-    .header__menu-icon {
-      display: block;
-      width: 26px;
-      height: 21px;
-      background-image: url(../images/sandwich.png);
+    &-img {
+      background-image: url(../images/css_sprites.png);
+      background-position: -10px -10px;
       background-repeat: no-repeat;
-      cursor: pointer;
+      width: 43px;
+      height: 42px;
+      // &:hover{
+
+      // }
     }
-    
-    .header-menu {
-      display: none;
-      text-align: left;
-      position: absolute;
-      top: 103px;
-      left: 0;
-      right: 0;      
-      z-index: 3;
-      background-color: rgb(47, 47, 47);      
-      padding: 0;
-      margin: 0;
+    &-text {
+      display: none;        
+    } 
+  }    
       
-      &__item {          
-        padding-left: 33px;
-        border-bottom: 1px solid rgb(78, 75, 75);
+  .btn_medium {
+    @include font('Montserrat', 700, 15px);
+    width: 119px;
+    height: 38px;
+    border-radius: 19px;
+    line-height: 38px;
+  }
+    
+  &__menu-icon {
+    display: block;
+    width: 26px;
+    height: 21px;
+    background-image: url(../images/sandwich.png);
+    background-repeat: no-repeat;
+    // cursor: pointer;
+  }
+    
+  .header-menu {
+    display: none;
+    text-align: left;
+    position: absolute;
+    top: 103px;
+    left: 0;
+    right: 0;      
+    z-index: 3;
+    background-color: rgb(47, 47, 47);      
+    padding: 0;
+    margin: 0;
+    
+    &__item {          
+      padding-left: 33px;
+      border-bottom: 1px solid rgb(78, 75, 75);
 
-        .header-menu__link {
-          @include font('Montserrat', 400, 32px);
-          color:   #ffffff;
-          line-height: 78px;
+      .header-menu__link {
+        @include font('Montserrat', 400, 32px);
+        color:   #ffffff;
+        line-height: 78px;
 
-          &:hover {
-            color:   #8d81ac;
-          }
+        &:hover {
+          color:   #8d81ac;
         }
-
       }
     }
   }
-  .container--header.menu--open .header-menu {
-    display: block;
-  }
-  .container--header.menu--open .header__menu-icon {
-    background-image: url(../images/cross.png);
-  }
+}
+.container_header.menu_open .header-menu {
+  display: block;
+}
+.container_header.menu_open .header__menu-icon {
+  background-image: url(../images/cross.png);
 }
