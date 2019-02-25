@@ -1,0 +1,56 @@
+.container_about {
+  text-align: center;
+}
+.about {
+  background-image: url(../images/testamonals-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 70px;
+
+  &__title {
+    @include font('Montserrat', 700, 36px);
+    color:  #ffffff;
+  }
+
+  &__list {
+    margin-top: 49px;
+    // padding-bottom: 44px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      content: '';
+      background-color:  rgba(199, 199, 199, 0.2);
+      width: 85%;
+      height: 1px;
+    } 
+
+    .about__item {
+      flex-basis: 80%;
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: center;
+      align-items: center;
+
+      &-img {
+        display: flex;
+        align-items: center;        
+        height: 64px;
+      }
+
+      &-text {
+        @include font('Lato', 700, 16px);
+        color:  #ffffff;
+        font-style: italic;
+        margin-top: 26px;
+        margin-bottom: 46px;        
+      }
+    }
+  }
+  &__description {
+    display: none;
+  } 
+}

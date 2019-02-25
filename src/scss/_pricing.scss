@@ -1,0 +1,78 @@
+.container_pricing {
+  text-align: center;
+}
+.pricing {
+  background-image: url(../images/Layer_2.png);
+
+  &__title {
+    @include font('Montserrat', 700, 28px);
+    color: #ffffff;
+    margin-bottom: 70px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .pricing__item {
+      background-color: rgba(255, 255, 255, 0.11);
+      flex-basis: 80%;
+      height: 457px;
+      display: flex;
+      flex-direction: column;
+      align-items:  center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+
+      .pricing__item-title {
+        background-color: rgba(255, 255, 255, 0.06);
+        padding-top: 36px;
+        padding-bottom: 36px;
+        text-transform: uppercase;
+        @include font('Montserrat', 400, 24px);
+        color:  #ffffff;
+        width: 100%;
+      }
+      .pricing__item-price {
+        @include font('Montserrat', 400, 60px);
+        color:  #ffffff;
+
+        &::after {
+          content: 'per month';
+          display: block;
+          font-size: 14px;
+          text-transform: uppercase;
+          margin-top: 24px;
+        }
+      }
+      .pricing__item-description {
+        @include font('Montserrat', 400, 16px);
+        color:  #ffffff;
+        line-height: 26px;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 60px;
+          height: 5px;
+          background-color: #8d81ac;
+          margin-left: auto;
+          margin-right: auto;
+          position: relative;
+          top: -30px;          
+        }
+      }
+      .pricing__item-btn {
+        text-transform: uppercase;
+        @include font('Montserrat', 400, 15px);
+        color:  #ffffff; 
+        width: 160px;
+        height: 42px;
+        line-height: 42px;
+        border-radius: 21px; 
+        background-color: rgba(255, 255, 255, 0.15);
+        margin-bottom: 38px;
+      }
+    }
+  }
+}

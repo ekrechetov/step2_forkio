@@ -1,53 +1,53 @@
+.container_company {
+  text-align: center;  
+}
 .company {
+  position: relative;
   background-image: url(../images/header-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 43px;
+  padding-bottom: 424px;
+  // padding-left: 30px;
+  // padding-right: 30px;
+  // box-sizing: border-box;
 
-  .container--company {
-    text-align: center;
-    padding-top: 43px;
-    padding-bottom: 424px;
-    position: relative;
+  &__title {
+    @include font('Montserrat', 700, 48px);
+    color:  #ffffff;
+  }
+  &__slogan {
+    @include font('Montserrat', 400, 18px);
+    color: #8d81ac;
+    margin-top: 20px;
+    line-height: 25px;
+  }
+  &__description {
+    @include font('Montserrat', 400, 14px);
+    color:  #848e97;
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
+  .block-proposition {
+    transform: translateX(-50%);
+    bottom: -49px;
+    display: inline-block;
+    position: absolute;
 
-    .company__title {
-      @include font('Montserrat', 700, 48px);
-      color:  #ffffff;
+    .btn_large {
+      @include font('Montserrat', 700, 18px);
+      display: block;        
+      width: 290px;
+      height: 44px;
+      border-radius: 22px;
+      line-height: 44px;        
     }
-    .company__slogan {
-      @include font('Montserrat', 400, 18px);
-      color: #8d81ac;
-      margin-top: 20px;
-      line-height: 25px;
-    }
-    .company__description {
+    .company__proposition {
       @include font('Montserrat', 400, 14px);
       color:  #848e97;
-      margin-top: 20px;
-      text-transform: uppercase;
+      margin-top: 13px;
+      text-align: center;
     }
-    .block-proposition {
-      transform: translateX(-50%);
-      bottom: -49px;
-      display: inline-block;
-      position: absolute;
-
-      .btn--large {
-        @include font('Montserrat', 700, 18px);
-        display: block;        
-        width: 290px;
-        height: 44px;
-        border-radius: 22px;
-        line-height: 44px;        
-      }
-      .company__proposition {
-        @include font('Montserrat', 400, 14px);
-        color:  #848e97;
-        margin-top: 13px;
-        text-align: center;
-      }
-    }
-  }  
+  }    
 }
