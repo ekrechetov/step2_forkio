@@ -9,9 +9,6 @@
   background-position: center;
   padding-top: 43px;
   padding-bottom: 424px;
-  // padding-left: 30px;
-  // padding-right: 30px;
-  // box-sizing: border-box;
 
   &__title {
     @include font('Montserrat', 700, 48px);
@@ -41,7 +38,12 @@
       width: 290px;
       height: 44px;
       border-radius: 22px;
-      line-height: 44px;        
+      line-height: 44px;
+      
+      &:hover {
+        border: 1px solid  #8d81ac;
+        box-sizing:  border-box; 
+      }
     }
     .company__proposition {
       @include font('Montserrat', 400, 14px);

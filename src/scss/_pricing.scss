@@ -3,17 +3,21 @@
 }
 .pricing {
   background-image: url(../images/Layer_2.png);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  padding-bottom: 90px;
 
   &__title {
     @include font('Montserrat', 700, 28px);
     color: #ffffff;
-    margin-bottom: 70px;
+    margin-bottom: 53px;
+    line-height: 55px;
   }
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+
     .pricing__item {
       background-color: rgba(255, 255, 255, 0.11);
       flex-basis: 80%;
@@ -24,7 +28,7 @@
       justify-content: space-between;
       margin-bottom: 14px;
 
-      .pricing__item-title {
+      &-title {
         background-color: rgba(255, 255, 255, 0.06);
         padding-top: 36px;
         padding-bottom: 36px;
@@ -33,7 +37,7 @@
         color:  #ffffff;
         width: 100%;
       }
-      .pricing__item-price {
+      &-price {
         @include font('Montserrat', 400, 60px);
         color:  #ffffff;
 
@@ -42,10 +46,10 @@
           display: block;
           font-size: 14px;
           text-transform: uppercase;
-          margin-top: 24px;
+          margin-top: 20px;
         }
       }
-      .pricing__item-description {
+      &-description {
         @include font('Montserrat', 400, 16px);
         color:  #ffffff;
         line-height: 26px;
@@ -59,10 +63,10 @@
           margin-left: auto;
           margin-right: auto;
           position: relative;
-          top: -30px;          
+          top: -24px;          
         }
       }
-      .pricing__item-btn {
+      &-btn {
         text-transform: uppercase;
         @include font('Montserrat', 400, 15px);
         color:  #ffffff; 
@@ -72,7 +76,46 @@
         border-radius: 21px; 
         background-color: rgba(255, 255, 255, 0.15);
         margin-bottom: 38px;
-      }
+        transition: 0.3s;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.7);
+          color: #7f6d78;
+          transition: 0.3s;
+        }
+      }    
     }
+    // Activ item:
+    .pricing__item.pricing__item_active {
+      background-color:rgba(0, 0, 0, 0.13);
+      flex-basis: 90%;
+      height: 560px;
+
+      .pricing__item-title {
+        background-color: rgba(0, 0, 0, 0.11);
+        padding-top: 43px;
+        padding-bottom: 43px;
+      }
+
+      .pricing__item-price {
+        @include font('Montserrat', 400, 82px);
+      }
+
+      .pricing__item-description {
+        margin-top: 50px;
+
+        &::before {
+          top: -40px;          
+        }
+      }
+
+      .pricing__item-btn {
+        @include font('Montserrat', 400, 16px);
+        width: 190px;
+        height: 52px;
+        line-height: 52px;
+        border-radius: 26px;
+        margin-bottom: 47px;
+      }
+    }      
   }
-}
+} 
