@@ -1,10 +1,6 @@
 @media screen and (min-width: 480px) {
-  .container_about {
-  }
-  
   .about {
     padding-top: 63px;
-    padding-bottom: 60px;    
   
     &__title {
       @include font('Montserrat', 700, 42px);
@@ -12,7 +8,6 @@
     
     &__list {
       margin-top: 100px;
-      // padding-bottom: 80px;
 
       &:after {
         width: 70%;
@@ -27,7 +22,6 @@
     }
   }
 }
-
 
 @media screen and (min-width: 768px) {
   .about {
@@ -46,17 +40,15 @@
         flex-basis: 34%;
         margin-left: 4%;
         margin-right: 4%;
-    
-        &-text {
-          // margin-bottom: 60px;
-        }
       }
     }
+
     &__description {
       display: block;
       width: 80%;
       margin-left: auto;
       margin-right: auto;
+      // margin-top: 40px;
       @include font('Lato', 400, 14px);
       color:  rgba(162, 145, 165, 0.8);
 
@@ -64,8 +56,7 @@
         content: '';
         display: block;
         background-color: rgba(199, 199, 199, 0.2);
-        width: 80%;
-        height: 1px;
+        height: 2px;
         margin-top: 17px;
         margin-left: auto;
         margin-right: auto;
@@ -74,14 +65,10 @@
   }  
 }
 
-
-
 @media screen and (min-width: 1200px) {
-  .container_about {
-  }
   .about {
     padding-top: 100px;
-    padding-bottom: 10px;
+    padding-bottom:  78px;
   
     &__title {
       @include font('Montserrat', 700, 48px);
@@ -97,14 +84,18 @@
         margin-right: 2%;
 
         &-text {
-          // margin-bottom: 60px;
-          // font-size: 26px; 
+          margin-top: 26px;
+          margin-bottom:  120px;        
         }
       }  
     }
+
     &__description {
       width: 72%;
-    }
 
+      &:after {
+        width: 89%;
+      }
+    }
   }
 }

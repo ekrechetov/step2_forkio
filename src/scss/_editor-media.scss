@@ -2,8 +2,6 @@
   .editor {
     padding-top: 135px;
     padding-bottom: 78px;
-    // padding-left: 14px;
-    // padding-right: 14px;
   
     &__title {
       @include font('Montserrat', 700, 42px);
@@ -20,8 +18,6 @@
   .editor {
     padding-top: 156px;
     padding-bottom: 98px; 
-    // padding-left: 50px;
-    // padding-right: 50px;
   
     &__descrition {
       @include font('Lato', 400, 21px);
