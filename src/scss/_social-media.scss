@@ -1,13 +1,12 @@
 @media (min-width: 480px) {
   .social {
     &__container {
-      padding: 0 25px;
+      padding: 90px 25px 0 25px;
     }
 
     &__slick {
-      margin-top: 120px;
 
-      &__info {
+      &-info {
         padding-top: 40px;
 
         &-feedback {
@@ -18,7 +17,7 @@
       &-person {
         flex-direction: row;
 
-        &__info {
+        &_info {
           margin-left: 25px;
           align-items: flex-start;
           padding-top: 0;
@@ -41,31 +40,20 @@
 @media (min-width: 768px) {
   .social {
     &__container {
-      padding: 0 40px;
+      padding: 50px 40px 0 40px;
     }
 
     &__slick {
-      margin-top: 50px;
 
       &-block {
         width: 600px;
       }
 
-      &__info {
+      &-info {
         padding-top: 50px;
 
         &-last-feedback {
           position: relative;
-
-          &::after {
-            position: absolute;
-            content: '';
-            width: 768px;
-            height: 1px;
-            background: rgb(199, 199, 199);;
-            top: 40px;
-            left: -313px;
-          }
         }
 
         &-feedback {
@@ -80,7 +68,7 @@
       }
 
       &-person {
-        &__name {
+        &_name {
           color: #8d81ac;
         }
       }
@@ -95,7 +83,7 @@
       &-git {
         margin: 0 20px;
 
-        &__link {
+        &_link {
           width: 240px;
         }
 
@@ -107,7 +95,7 @@
       &-twitter {
         margin: 0 20px 35px 20px;
 
-        &__link {
+        &_link {
           width: 240px;
           margin-top: 0;
         }
@@ -120,7 +108,7 @@
       &-facebook {
         margin: 0 20px;
 
-        &__link {
+        &_link {
           width: 240px;
           margin-top: 0;
         }

@@ -9,14 +9,14 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 15px;
+    padding: 60px 15px 0 15px;
   }
 
   &__slick {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    min-height: 300px;
 
     &-left {
       color: rgb(161, 161, 161);
@@ -47,7 +47,7 @@
       flex-direction: column;
       align-items: center;
 
-      &__block {
+      &_block {
         display: flex;
         justify-content: center;
         border-radius: 50%;
@@ -61,7 +61,7 @@
         }
       }
 
-      &__info {
+      &_info {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -69,19 +69,19 @@
         padding-top: 25px;
       }
 
-      &__name {
+      &_name {
         @include font('Montserrat', 700, 24px);
         color: #474747;
       }
 
-      &__nick {
+      &_nick {
         @include font('Montserrat', 400, 16px);
         color: #8d81ac;
         margin-top: 10px;
       }
     }
 
-    &__info {
+    &-info {
       padding-top: 25px;
       text-align: center;
 
@@ -112,7 +112,7 @@
       display: flex;
       flex-direction: column;
 
-      &__link {
+      &_link {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -145,7 +145,7 @@
         color: #2b414d;
       }
 
-      &__foll {
+      &_foll {
         @include font('Montserrat', 400, 14px);
         color: #848e97;
         margin-top: 18px;
@@ -156,7 +156,7 @@
       display: flex;
       flex-direction: column;
 
-      &__link {
+      &_link {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -185,7 +185,7 @@
         left: 25px;
       }
 
-      &__foll {
+      &_foll {
         @include font('Montserrat', 400, 14px);
         color: #848e97;
         margin-top: 18px;
@@ -196,7 +196,7 @@
       display: flex;
       flex-direction: column;
 
-      &__link {
+      &_link {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -225,7 +225,7 @@
         left: 25px;
       }
 
-      &__foll {
+      &_foll {
         @include font('Montserrat', 400, 14px);
         color: #848e97;
         margin-top: 18px;
