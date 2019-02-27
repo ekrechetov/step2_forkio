@@ -11,7 +11,7 @@
       &-block {
         flex-direction: row;
         justify-content: space-between;
-        align-items: normal;
+        align-items: stretch;
 
         &-main {
           display: flex;
@@ -54,6 +54,7 @@
   .solution {
     justify-content: center;
     position: relative;
+    padding: 0;
 
     &__title {
       @include font('Montserrat', 700, 48px);
@@ -67,19 +68,24 @@
 
       &-block {
         padding: 0 90px 55px 0;
+        &-main {
+          padding-left: 25px;
+        }
       }
     }
 
     &__editor {
       position: absolute;
       right: 0;
-      width: 50%;
-      top: 12%;
-      height: 85%;
+      width: 52%;
+      top: 16%;
+      height: 80%;
       grid-area: editor;
       margin: 0;
     }
+
     &__container {
+      padding-top: 80px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas: 'description title' 'description editor';
