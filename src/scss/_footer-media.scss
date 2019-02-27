@@ -70,9 +70,10 @@
 
 @media (min-width: 1200px) {
   .footer {
-    padding: 60px 90px;
+    padding: 60px 0;
 
     &__container {
+      width: 1200px;
       flex-wrap: nowrap;
     }
 
