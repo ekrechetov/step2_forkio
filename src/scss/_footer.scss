@@ -9,35 +9,29 @@
 
   &__logo {
     &-block {
+      cursor: pointer;
+      &:hover .footer__logo-block-img {
+        background: url("../images/css_sprites.png") -73px -10px;
+      }
+      &:hover .footer__logo-block-title {
+        color: #8d81ac;
+
+        span {
+          color: #333;
+        }
+      }
       &-img {
         display: none;
         background: url("../images/css_sprites.png") -10px -10px;
         left: 0;
         width: 43px;
         height: 41px;
-        transition: all 0.2s;
-
-        &:hover {
-          background: url("../images/css_sprites.png") -73px -10px;
-          transition: all 0.2s;
-        }
       }
 
       &-title {
         @include font('Montserrat', 400, 24px);
         color: #333;
         text-transform: uppercase;
-        transition: all 0.5s;
-
-        &:hover {
-          color: #8d81ac;
-          transition: all 0.5s;
-
-          span {
-            color: #333;
-            transition: all 0.5s;
-          }
-        }
 
         span {
           color: #8d81ac;
@@ -54,13 +48,13 @@
   }
 
   &__menu-nav {
-    &__title {
+    &-title {
       @include font('Montserrat', 400, 16px);
       color: #323232;
       margin-top: 36px;
     }
 
-    &_bar {
+    &-bar {
       margin-top: 20px;
       display: flex;
       flex-direction: column;
