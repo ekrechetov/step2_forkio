@@ -1,3 +1,6 @@
+# This project on Githab pages:
+https://ekrechetov.github.io/step2_forkio
+
 ## Задание
 
 Сверстать макет [psd](Forkio_1200.psd) 
